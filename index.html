@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Password Visibility Toggle</title>
+
+<style>
+    body {
+        background-color: black;
+        color: white;
+        font-family: Arial;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        margin-left: 40%;
+    }
+
+    input[type="password"],
+    input[type="text"] {
+        margin-left: 40%;
+        padding: 5px;
+        width: 180px;
+    }
+
+    input[type="checkbox"] {
+        margin-left: 40%;
+        margin-top: 10px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+</style>
+
+</head>
+
+<body>
+
+<h2>Password Visibility Toggle</h2>
+
+<p>Enter your password:</p>
+
+<input type="password" id="pass"><br>
+
+<input type="checkbox" onclick="showHide()">
+<label>Show password</label>
+
+<script>
+function showHide() {
+    var n = document.getElementById("pass");
+
+    if (n.type == "password") {
+        n.type = "text";
+    } else {
+        n.type = "password";
+    }
+}
+</script>
+
+</body>
+</html>
